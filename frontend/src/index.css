@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  flex: 1;
+}
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  padding: 1rem 100px;
+  background-color: #f8f9fa;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer {
+  min-height: 5rem;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0px;
+}
+.icons{
+  display: flex;
+  gap: 20px;
+}
+.fa-brands{
+  font-size: 25px;
+}
+.fa-brands:hover{
+  color: red;
+}
+
+
+.anchortag {
+  text-decoration: none;
+  color: #111;
+}
+.anchortag:hover{
+  color: red;
+}
+
+/* homepage styling */
+
+.homepage-container {
+  width: 100%;
+  display: flex;
+  height: 60vh;
+}
+.img-section{
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url("../public/media/images/img8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-groups {
+  gap: 1%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-container {
+  width: 24%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 1rem;
+}
+.card-container:hover{
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.img-box {
+  height: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 2s;
+}
+.card-img-top {
+  object-fit: cover;
+  height: 100%;
+  width: 100% !important;
+  transition: transform 0.8s;
+  animation: imageview 2s ease-in 0s infinite;
+}
+.card-body {
+  padding: 0px !important;
+}
+.discount-product{
+  padding: 2rem 100px;
+  height: auto;
+}
+
+.active{
+  background-color: aqua;
+  color: #111;
+}
+.displayclass{
+  display: none;
+}
