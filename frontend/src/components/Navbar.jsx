@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 
 function Navbar() {
-  const [islogin, setIsLogin] = useState(true)
-  function eventchecker(e){
-    e.preventDefault();
-    setIsLogin(false)
-  }
 
   return (
     <nav class="navbar">
