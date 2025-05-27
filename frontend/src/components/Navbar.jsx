@@ -16,10 +16,7 @@ function Navbar() {
           <li><a href="#" className='anchortag'>About</a></li>
           <li><a href="#" className='anchortag'>Services</a></li>
           <li><a href="#" className='anchortag'>Contact</a></li>
-          {islogin ? <>
-            <li ><a href="/userloginorsignup" className='anchortag'><button className="btn btn-primary">Login</button></a></li>
-          </> : <>hello</>}
-
+          <li ><a href="/userloginorsignup" className='anchortag'><button className="btn btn-primary">Login</button></a></li>
         </ul>
       </div>
     </nav>
