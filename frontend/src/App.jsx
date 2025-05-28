@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 import { Routes, Route } from "react-router-dom"
 import Footer from './components/Footer'
 import Auth from './pages/Auth'
-import Contact from './pages/Contact/Contact'
 
 function App() {
   return (

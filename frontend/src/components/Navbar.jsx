@@ -9,7 +9,6 @@ function Navbar() {
         <ul style={{ display: "flex", listStyle: "none", gap: "40px", alignItems: "center", padding: "0px", margin: "0px" }}>
           <li><a href="/" className='anchortag'>Home</a></li>
           <li><a href="#" className='anchortag'>About</a></li>
-          <li><a href="#" className='anchortag'>Services</a></li>
           <li ><a href="/userloginorsignup" className='anchortag'><button className="btn btn-primary">Login</button></a></li>
         </ul>
       </div>
