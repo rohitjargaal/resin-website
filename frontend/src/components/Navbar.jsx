@@ -10,7 +10,6 @@ function Navbar() {
           <li><a href="/" className='anchortag'>Home</a></li>
           <li><a href="#" className='anchortag'>About</a></li>
           <li><a href="#" className='anchortag'>Services</a></li>
-          <li><a href="#" className='anchortag'>Contact</a></li>
           <li ><a href="/userloginorsignup" className='anchortag'><button className="btn btn-primary">Login</button></a></li>
         </ul>
       </div>

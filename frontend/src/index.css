@@ -107,3 +107,7 @@
   padding: 2rem 100px;
   height: auto;
 }
+/* contact page styling */
+.contact-container{
+  min-height: 100vh;
+}

@@ -28,7 +28,7 @@ function Auth() {
                                 </a>
                             </div>
                             <div className="d-flex justify-content-center mt-3">
-                                <button className="btn btn-danger">
+                                <button className="btn btn-primary">
                                     Log in
                                 </button>
                             </div>
@@ -57,7 +57,7 @@ function Auth() {
                                 <a className="btn-link" onClick={() => { setIsLogin(true) }} style={{ textDecoration: "none" }}>Already a user</a>
                             </div>
                             <div className="d-flex justify-content-center mt-3">
-                                <button className="btn btn-danger">Signup</button>
+                                <button className="btn btn-primary">Signup</button>
                             </div>
                         </form>
                     </div>
