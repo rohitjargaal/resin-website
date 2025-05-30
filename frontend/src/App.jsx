@@ -2,7 +2,8 @@ import HomePage from './pages/Home/HomePage'
 import Navbar from './components/Navbar'
 import { Routes, Route } from "react-router-dom"
 import Footer from './components/Footer'
-import Auth from './pages/Auth'
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <div className='content-container'>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/userloginorsignup' element={<Auth />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
         </Routes>
       </div>
       <Footer />

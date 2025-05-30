@@ -7,7 +7,10 @@ import mongoose from "mongoose";
 import cors from "cors"
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+     credentials: true,
+    origin: "http://localhost:5173"
+}))
 app.use("/user",userRoutes)
 
 

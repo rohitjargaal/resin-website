@@ -15,7 +15,7 @@ export const register = async (req, res) => {
                 password: password
             })
             await useradded.save();
-            res.status(200).send("user register successfully")
+            res.status(200).send({ success: "true", message: "user register successfully" })
         } else {
             res.status(408).send("email already exists")
         }
@@ -29,14 +29,14 @@ export const login = async (req, res) => {
     try {
         const user = await UserModel.findOne({ email: email })
         if (!user) {
-            res.status(404).send("Invalid credentials: User not found")
+            res.status(400).send({ message: "Invalid credentials: User not found" })
         } else {
             const ismatch = await bcrypt.compare(password, user.password)
             if (!ismatch) {
-                res.status(200).send("Invalid credentials: Wrong password")
+                res.status(400).send({ message: "Invalid credentials: Wrong password" })
             } else {
                 const token = jwt.sign({ userId: user._id }, jwtkey, { expiresIn: "2h" })
-                res.cookie("token",token);
+                res.cookie("token", token);
                 res.json({ success: true, message: "User login successful", userId: user._id });
             }
         }
