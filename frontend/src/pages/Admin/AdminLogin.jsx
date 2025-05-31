@@ -10,13 +10,13 @@ function AdminLogin() {
 
     function adminlogin(e) {
         e.preventDefault()
-        axios.post("http://localhost:8080/user/login", { email, password }, { withCredentials: true })
+        axios.post("http://localhost:8080/admin/login", { email, password }, { withCredentials: true })
             .then((res) => {
                 console.log(res)
                 if (res.data.success) {
                     console.log(res.data.success)
                     toast.success(res.data.message)
-                    navigate("/")
+                    navigate("/dashboard")
                 }
             }).catch((err) => {
                 toast.error(err.response.data.message)

@@ -19,6 +19,6 @@ AdminSchema.pre('save', async function(next){
     next()
 })
 
-const AdminModel = mongoose.model("UserModel", AdminSchema)
+const AdminModel = mongoose.model("AdminModel", AdminSchema)
 export default AdminModel
 

@@ -1,4 +1,4 @@
-import UserModel from "../models/User.js";
+import UserModel from "../models/UserModel.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 const jwtkey = "helloworld"
