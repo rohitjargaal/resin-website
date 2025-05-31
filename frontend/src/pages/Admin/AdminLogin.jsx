@@ -3,16 +3,14 @@ import axios from "axios"
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-
-function Login() {
-
+function AdminLogin() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate();
 
-    function loginhandle(e) {
+    function adminlogin(e) {
         e.preventDefault()
-        axios.post("http://localhost:8080/user/login",{email,password},{withCredentials:true})
+        axios.post("http://localhost:8080/user/login", { email, password }, { withCredentials: true })
             .then((res) => {
                 console.log(res)
                 if (res.data.success) {
@@ -24,12 +22,11 @@ function Login() {
                 toast.error(err.response.data.message)
             })
     }
-
     return (
         <div className='container'>
             <div className="row">
                 <div className="col-4 offset-4 mt-5">
-                    <form onSubmit={loginhandle}>
+                    <form onSubmit={adminlogin}>
                         <h4 className='text-center'><b>Login On Nova Threads</b></h4>
                         <div className="mb-3">
                             <label className="form-label" >Email</label>
@@ -39,18 +36,9 @@ function Login() {
                             <label className="form-label">Password</label>
                             <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
                         </div>
-                        <div className="mt-4 d-flex justify-content-evenly">
-                            <a className="btn-link" style={{ textDecoration: "none" }} href='/register'>
-                                Don't have account ? Create a Account
-                            </a>
-                        </div>
-                        <div className="mt-4 d-flex justify-content-evenly">
-                            <a className="btn-link" style={{ textDecoration: "none" }} href='/adminlogin'>Login as Admin
-                            </a>
-                        </div>
                         <div className="d-flex justify-content-center mt-3">
                             <button className="btn btn-primary">
-                                Log in
+                                Admin Login
                             </button>
                         </div>
                     </form>
@@ -60,4 +48,4 @@ function Login() {
     )
 }
 
-export default Login
+export default AdminLogin

@@ -3,6 +3,8 @@ dotenv.config();
 import express from "express"
 const app = express()
 import userRoutes from "./routes/User.js";
+import adminRoutes from "./routes/Admin.js";
+
 import mongoose from "mongoose";
 import cors from "cors"
 
@@ -12,6 +14,8 @@ app.use(cors({
     origin: "http://localhost:5173"
 }))
 app.use("/user",userRoutes)
+app.use("/admin",adminRoutes)
+
 
 
 app.listen(process.env.PORT, () => {

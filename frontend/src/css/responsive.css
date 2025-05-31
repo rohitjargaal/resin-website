@@ -1,0 +1,40 @@
+@media screen and (max-width: 480px) {
+  body {
+    /* background-color: lightgreen; */
+  }
+  .navbar .navbar-container ul li{
+    display: none;
+  }
+  .homepage-container .img-section{
+    height: calc(100vh - 7rem);
+    margin-top: 0px;
+    background-size: cover;
+    padding: 1rem !important;
+    border-radius: 0px !important;
+  }
+  .feature-sec, .discount-product{
+    padding: 0px 0px !important;
+  }
+  .card-groups{
+    padding: 1rem;
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0px !important;
+    justify-content: space-between;
+  }
+  .card-groups .card-container{
+    width: 46%;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 0.7rem !important;
+  }
+  .footer .row{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    padding: 0px !important;
+  }
+  .footer .row .col-4{
+    width: 50% !important;
+    margin-top: 2rem !important;
+  }
+}

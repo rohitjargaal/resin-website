@@ -2,14 +2,11 @@ import React from 'react'
 
 function HomePage() {
   return (
-    <div className="">
-      <div className="mt-4" style={{ height: "60vh", padding: "0px 30px" }}>
-         <div className="img-section"  style={{ height: "100%", width: "100%", objectFit: "cover", borderRadius: "20px",display:"flex",flexDirection:"column",alignItems:"start",justifyContent:"end",padding:"3rem",color:"white" }}>
-          <h1 style={{color:"wheat"}}>Nova Threads</h1>
-          <h3>Trending Deals For You</h3>
-          <button type="button" className="btn btn-outline-danger">Shop Now</button>
-
-      </div>
+    <div className="homepage-container">
+      <div className="img-section">
+        <h1 style={{ color: "wheat" }}>Nova Threads</h1>
+        <h3>Trending Deals For You</h3>
+        <button type="button" className="btn btn-outline-danger">Shop Now</button>
       </div>
       <div className="feature-sec mt-5 mb-5" style={{ height: "auto", padding: "0px 100px" }}>
         <h3 className='text-center'>Featured Products</h3>
@@ -72,7 +69,7 @@ function HomePage() {
       </div>
       <div className="discount-product">
         <h2 className='text-center'>Super deals</h2>
-                <div className="card-groups">
+        <div className="card-groups">
           <div className="card-container">
             <div className='img-box'>
               <img src="media/images/img1.webp" className="card-img-top" alt="..." />

@@ -8,12 +8,11 @@ import { useNavigate } from 'react-router-dom';
 function Navbar() {
   const navigate = useNavigate();
 
-  const [token, setToken] = useState(Cookies.get("token") || null);
+  const token = Cookies.get("token")
 
-  const handleLogout = async () => {
+    function handleLogout(){
     try {
       Cookies.remove("token")
-      setToken(null);
       toast.success("logout successfully")
       navigate("/login");
     } catch (error) {
@@ -28,10 +27,11 @@ function Navbar() {
         <ul style={{ display: "flex", listStyle: "none", gap: "40px", alignItems: "center", padding: "0px", margin: "0px" }}>
           <li><a href="/" className='anchortag'>Home</a></li>
           <li><a href="#" className='anchortag'>About</a></li>
-          {token ? <ul style={{ display: "flex", listStyle: "none", alignItems: "center", gap: "40px", padding: "0px" }}>
+          {!token ? <li ><a href="/login" className='anchortag'><button className="btn btn-primary">Login</button></a></li>
+          : <ul style={{ display: "flex", listStyle: "none", alignItems: "center", gap: "40px", padding: "0px" }}>
             <li><a href="" style={{ textDecoration: "none", color: "black" }}>Cart</a></li>
             <li><button className='btn btn-danger' onClick={handleLogout}>Logout</button></li>
-          </ul> : <li ><a href="/login" className='anchortag'><button className="btn btn-primary">Login</button></a></li>
+          </ul>
           }
         </ul>
       </div>
