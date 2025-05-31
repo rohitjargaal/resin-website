@@ -18,7 +18,6 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/create' element={<CreateProduct />} />
           <Route path='/adminlogin' element={<AdminLogin />} />
-
         </Routes>
       </div>
       <Footer />

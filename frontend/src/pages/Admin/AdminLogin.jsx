@@ -27,7 +27,7 @@ function AdminLogin() {
             <div className="row">
                 <div className="col-4 offset-4 mt-5">
                     <form onSubmit={adminlogin}>
-                        <h4 className='text-center'><b>Login On Nova Threads</b></h4>
+                        <h4 className='text-center'><b>Login as Admin On Nova Threads</b></h4>
                         <div className="mb-3">
                             <label className="form-label" >Email</label>
                             <input type="text" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
