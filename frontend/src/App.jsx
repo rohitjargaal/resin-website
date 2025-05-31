@@ -2,8 +2,8 @@ import HomePage from './pages/User/HomePage'
 import Navbar from './components/Navbar'
 import { Routes, Route } from "react-router-dom"
 import Footer from './components/Footer'
-import Login from './pages/Login'
-import Register from './pages/Register'
+import Login from './pages/User/Login'
+import Register from './pages/User/Register'
 import CreateProduct from './pages/Admin/CreateProduct'
 import AdminLogin from './pages/Admin/AdminLogin'
 
